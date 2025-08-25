@@ -124,6 +124,38 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## 🔧 Troubleshooting Deployment
+
+### Common Streamlit Cloud Issues
+
+**Issue 1: Requirements Installation Error**
+- **Solution**: The `requirements.txt` uses latest package versions without pins
+- **Alternative**: Try using `pip install -r requirements.txt` locally first
+
+**Issue 2: Module Import Errors**
+- **Solution**: Ensure the repository structure is preserved
+- **Check**: All `__init__.py` files are present in model directories
+
+**Issue 3: Memory or Timeout Issues**
+- **Solution**: Reduce simulation parameters for cloud deployment
+- **Edit**: In `app.py`, change default simulations from 1000 to 100-500
+
+**Issue 4: Python Version Conflicts**
+- **Solution**: The `runtime.txt` specifies Python 3.9
+- **Check**: Streamlit Cloud supports Python 3.9-3.11
+
+### Local Testing Before Deployment
+```bash
+# Test imports
+python3 -c "from app import main; print('✅ App imports successful')"
+
+# Test demo
+python3 demo.py
+
+# Test Streamlit locally
+streamlit run app.py
+```
+
 ## Using the Tool
 
 ### 1. Configure BESS Asset
