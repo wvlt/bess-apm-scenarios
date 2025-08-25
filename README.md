@@ -1,4 +1,9 @@
-# BESS APM Platform Investment Analysis Tool
+# 🔋 BESS APM Platform Investment Analysis Tool
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://wvlt-bess-apm-scenarios-app-main.streamlit.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/wvlt/bess-apm-scenarios)
+[![Python](https://img.shields.io/badge/Python-3.8+-green)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ## Overview
 
@@ -83,6 +88,41 @@ streamlit run app.py
 ```
 
 The application will open in your web browser at `http://localhost:8501`
+
+## 🌐 Live Demo
+
+**Try the live application here: [BESS APM Analysis Tool](https://wvlt-bess-apm-scenarios-app-main.streamlit.app)**
+
+## 🚀 Deployment Options
+
+### Streamlit Cloud (Recommended)
+1. Fork this repository
+2. Visit [share.streamlit.io](https://share.streamlit.io)
+3. Connect your GitHub account
+4. Deploy from your forked repository
+5. Set main file as `app.py`
+
+### Docker Deployment
+```bash
+# Build the Docker image
+docker build -t bess-apm-analysis .
+
+# Run the container
+docker run -p 8501:8501 bess-apm-analysis
+```
+
+### Local Development
+```bash
+# Clone the repository
+git clone https://github.com/wvlt/bess-apm-scenarios.git
+cd bess-apm-scenarios
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run app.py
+```
 
 ## Using the Tool
 
